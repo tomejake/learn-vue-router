@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Vuelog</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,15 +23,28 @@
     </div>
   </div>
 </nav>
+<div class="container mt-4">
+  <h5>react 개발자 블로그 입니다.</h5>
+  <p> - Vue로 만들었음 - </p>
+</div>
+<List :blogData='blogData'/>
 </template>
 
 <script>
-
+import List from './components/List.vue';
+import blog from './assets/blog.js';
 
 export default {
   name: 'App',
-  components: {
+  data(){
+    return {
+      blogData : blog,
 
+    }
+  }
+  ,
+  components: {
+    List
   }
 }
 </script>
