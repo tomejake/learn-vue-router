@@ -23,28 +23,26 @@
     </div>
   </div>
 </nav>
-<div class="container mt-4">
-  <h5>react 개발자 블로그 입니다.</h5>
-  <p> - Vue로 만들었음 - </p>
-</div>
-<List :blogData='blogData'/>
+<router-link to="/list">리스트 페이지</router-link>
+<router-link to="/">홈 페이지</router-link>
+<router-view :blogData="blogData"></router-view>
+<!-- <List :blogData='blogData'/> -->
 </template>
 
 <script>
-import List from './components/List.vue';
-import blog from './assets/blog.js';
+// import List from './components/List.vue';
+import blog from './assets/blog.js'; 
 
 export default {
   name: 'App',
   data(){
     return {
       blogData : blog,
-
     }
   }
   ,
   components: {
-    List
+    // List
   }
 }
 </script>
