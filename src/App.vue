@@ -23,8 +23,8 @@
     </div>
   </div>
 </nav>
-<router-link to="/list">리스트 페이지</router-link>
-<router-link to="/">홈 페이지</router-link>
+<router-link to="/list">리스트 페이지</router-link><br>
+<router-link to="/">홈 페이지</router-link><br>
 <router-view :blogData="blogData"></router-view>
 <!-- <List :blogData='blogData'/> -->
 </template>
