@@ -23,9 +23,11 @@
     </div>
   </div>
 </nav>
-<router-link to="/list">리스트 페이지</router-link>
-<router-link to="/">홈 페이지</router-link>
-<router-view :blogData="blogData"></router-view>
+<router-link to="/list">리스트 페이지</router-link><br>
+<router-link to="/">홈 페이지</router-link><br>
+<div class="mt-4">
+  <router-view :blogData="blogData"></router-view>
+</div>
 <!-- <List :blogData='blogData'/> -->
 </template>
 
